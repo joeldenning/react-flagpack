@@ -45,13 +45,8 @@ export default {
   external: ['react', 'flagpack-core'],
   input: './src/main.ts',
   output: {
-<<<<<<< Updated upstream
-    file: 'dist/react-flag-rollup.cjs.js',
-    format: 'cjs',
-=======
     file: 'dist/react-flag-rollup.js',
     format: 'module',
->>>>>>> Stashed changes
     exports: 'auto'
   }
 }

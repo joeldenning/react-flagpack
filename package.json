@@ -20,11 +20,7 @@
   "files": [
     "dist/*"
   ],
-<<<<<<< Updated upstream
-  "main": "dist/react-flag-rollup.cjs.js",
-=======
   "main": "dist/react-flag-rollup.js",
->>>>>>> Stashed changes
   "types": "dist/main.d.ts",
   "license": "MIT",
   "bugs": {

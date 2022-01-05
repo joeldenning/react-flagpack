@@ -20,22 +20,6 @@ const Flag: React.FC<Props> = ({
   hasDropShadow = false,
   hasBorderRadius = true,
   className
-<<<<<<< Updated upstream
-}: Props) => (
-  <div
-    className={
-      `flag
-    ${gradient}
-    size-${size}
-    ${hasBorder ? 'border' : ''}
-    ${hasDropShadow ? 'drop-shadow' : ''}
-    ${hasBorderRadius ? 'border-radius' : ''}
-    ${className ? className.replace(/\s\s+/g, ' ').trim() : ''}`
-    }>
-    <img src={require(`./flags/${size}/${code}.svg`).default} />
-  </div>
-)
-=======
 }: Props) => {
   const [imgSrc, setImgSrc] = React.useState()
 
@@ -66,6 +50,5 @@ const Flag: React.FC<Props> = ({
     </div>
   )
 }
->>>>>>> Stashed changes
 
 export default Flag
