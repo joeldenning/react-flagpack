@@ -56,15 +56,16 @@ styleInject(css_248z);
 
 const Flag = ({ code = 'NL', size = 'l', gradient = '', hasBorder = true, hasDropShadow = false, hasBorderRadius = true, className }) => {
     const flagModule = require(`./flags/${size}/${code}.svg`);
-    console.log("flag module", flagModule);
+    // webpack, nextjs, and other build tools treat svg imports differently
+    const src = typeof flagModule.default === 'string' ? flagModule.default : flagModule.default.src;
     return (React__namespace.createElement("div", { className: `flag
-    ${gradient}
-    size-${size}
-    ${hasBorder ? 'border' : ''}
-    ${hasDropShadow ? 'drop-shadow' : ''}
-    ${hasBorderRadius ? 'border-radius' : ''}
-    ${className ? className.replace(/\s\s+/g, ' ').trim() : ''}` },
-        React__namespace.createElement("img", { src: flagModule.default.src })));
+      ${gradient}
+      size-${size}
+      ${hasBorder ? 'border' : ''}
+      ${hasDropShadow ? 'drop-shadow' : ''}
+      ${hasBorderRadius ? 'border-radius' : ''}
+      ${className ? className.replace(/\s\s+/g, ' ').trim() : ''}` },
+        React__namespace.createElement("img", { src: src })));
 };
 
 module.exports = Flag;
